@@ -28,7 +28,7 @@ public class AddImagenActivity extends AppCompatActivity {
     private Intent resultadoImagen = null;
     private ImageView ivImageEdit;
     private EditText etNombre, etDescripcion;
-    private Button btConfirmImage, btCancelImage;
+    private Button btConfirmImage;
     private AddImagenViewModel aivm;
 
     @Override
@@ -62,8 +62,8 @@ public class AddImagenActivity extends AppCompatActivity {
         btConfirmImage = findViewById(R.id.btConfirmImage);
         btConfirmImage.setOnClickListener(view -> {
             uploadDataImage();
-            //Intent intent = new Intent(AddImagenActivity.this, MainActivity.class);
-            //startActivity(intent);
+            Intent intent = new Intent(AddImagenActivity.this, MainActivity.class);
+            startActivity(intent);
         });
 
         aivm = new ViewModelProvider(this).get(AddImagenViewModel.class);

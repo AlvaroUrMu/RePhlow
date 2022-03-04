@@ -15,6 +15,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.squareup.picasso.MemoryPolicy;
+import com.squareup.picasso.NetworkPolicy;
+import com.squareup.picasso.Picasso;
 
 import org.ivz.ad.aurbano.rephlow.R;
 import org.ivz.ad.aurbano.rephlow.model.entity.Flora;
@@ -48,9 +51,9 @@ public class FloraAdapter extends RecyclerView.Adapter<FloraViewHolder>{
         holder.flora = flora;
 
         String urlImage = "https://informatica.ieszaidinvergeles.org:10018/ad/felixRDLFApp/public/api/imagen/" + flora.getId() + "/flora";
-        String defaultImage = "https://informatica.ieszaidinvergeles.org:10018/ad/felixRDLFApp/public/storage/images/noimageflora.jpeg";
+        //String defaultImage = "https://informatica.ieszaidinvergeles.org:10018/ad/felixRDLFApp/public/storage/images/noimageflora.png";
 
-        Glide.with(context).load(urlImage).into(holder.ivImage);
+        Picasso.get().load(urlImage).memoryPolicy(MemoryPolicy.NO_CACHE).networkPolicy(NetworkPolicy.NO_CACHE).into(holder.ivImage);
 
         holder.tvNombre.setText(flora.getNombre());
         holder.tvFamilia.setText(flora.getFamilia());
@@ -76,75 +79,57 @@ public class FloraAdapter extends RecyclerView.Adapter<FloraViewHolder>{
         if(holder.tvFamilia.getText().length() == 0) {
             holder.tvFamilia.setText("Sin información");
         }
-
         if(holder.tvIdent.getText().length() == 0) {
             holder.tvIdent.setText("Sin información");
         }
-
         if(holder.tvAltitud.getText().length() == 0) {
             holder.tvAltitud.setText("Sin información");
         }
-
         if(holder.tvHabitat.getText().length() == 0) {
             holder.tvHabitat.setText("Sin información");
         }
-
         if(holder.tvFito.getText().length() == 0) {
             holder.tvFito.setText("Sin información");
         }
-
         if(holder.tvBiotipo.getText().length() == 0) {
             holder.tvBiotipo.setText("Sin información");
         }
-
         if(holder.tvBiorep.getText().length() == 0) {
             holder.tvBiorep.setText("Sin información");
         }
-
         if(holder.tvFlor.getText().length() == 0) {
             holder.tvFlor.setText("Sin información");
         }
-
         if(holder.tvFruct.getText().length() == 0) {
             holder.tvFruct.setText("Sin información");
         }
-
         if(holder.tvExpsex.getText().length() == 0) {
             holder.tvExpsex.setText("Sin información");
         }
-
         if(holder.tvPolin.getText().length() == 0) {
             holder.tvPolin.setText("Sin información");
         }
-
         if(holder.tvDisp.getText().length() == 0) {
             holder.tvDisp.setText("Sin información");
         }
-
         if(holder.tvNumcrom.getText().length() == 0) {
             holder.tvNumcrom.setText("Sin información");
         }
-
         if(holder.tvRepasex.getText().length() == 0) {
             holder.tvRepasex.setText("Sin información");
         }
-
         if(holder.tvDist.getText().length() == 0) {
             holder.tvDist.setText("Sin información");
         }
-
         if(holder.tvBiologia.getText().length() == 0) {
             holder.tvBiologia.setText("Sin información");
         }
-
         if(holder.tvDemo.getText().length() == 0) {
             holder.tvDemo.setText("Sin información");
         }
-
         if(holder.tvAmen.getText().length() == 0) {
             holder.tvAmen.setText("Sin información");
         }
-
         if(holder.tvMedprop.getText().length() == 0) {
             holder.tvMedprop.setText("Sin información");
         }
@@ -160,25 +145,6 @@ public class FloraAdapter extends RecyclerView.Adapter<FloraViewHolder>{
                 holder.ibExpand.setImageResource(R.drawable.ic_baseline_keyboard_arrow_down_24);
             }
         });
-
-        /* holder.tvId.setText(String.valueOf(flora.getId()));
-
-        holder.ivImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                alertDialog.setTitle(holder.tvNombre.getText()).setPositiveButton("edit", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        context.startActivity(new Intent(context, EditActivity.class));
-                    }
-                }).setNegativeButton("cancelar", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                    }
-                }).show();
-            }
-        });*/
     }
 
     @Override

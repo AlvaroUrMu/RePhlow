@@ -8,4 +8,5 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="appcolor1">#DA2865</color>
+    <color name="appcolor2">#444444</color>
 </resources>

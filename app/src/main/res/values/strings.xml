@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">RePhlow</string>
+    <string name="btEditInfo">editar info</string>
+    <string name="btEditImage">editar imagen</string>
+    <string name="nombre">Nombre</string>
+    <string name="familia">Familia</string>
+    <string name="identificacion">Identificación</string>
+    <string name="altitud">Altitud</string>
+    <string name="habitat">Hábitat</string>
+    <string name="fitosociologia">Fitosociología</string>
+    <string name="biotipo">Biotipo</string>
+    <string name="biologiareproductiva">Biología reproductiva</string>
+    <string name="bioreproductiva">Bio. reproductiva</string>
+    <string name="floracion">Floración</string>
+    <string name="fructificacion">Fructificación</string>
+    <string name="expresionsexual">Expresión sexual</string>
+    <string name="polinizacion">Polinización</string>
+    <string name="dispersion">Dispersión</string>
+    <string name="numcromosomatico">Número cromosomático</string>
+    <string name="ncromosomatico">Núm. cromosomático</string>
+    <string name="repasexual">Reproducción asexual</string>
+    <string name="distribucion">Distribución</string>
+    <string name="biologia">Biología</string>
+    <string name="demografia">Demografía</string>
+    <string name="amenazas">Amenazas</string>
+    <string name="medpropuestas">Medidas propuestas</string>
+    <string name="btConfirm">confirmar</string>
+    <string name="btCancel">cancelar</string>
+    <string name="etNombreImagen">Nombre imagen</string>
+    <string name="etDescripcion">Descripción</string>
+    <string name="cdibEdit">Button expand</string>
+    <string name="noinfo">Sin información</string>
+</resources>
